@@ -3,12 +3,17 @@
     cars: @props.data
   getDefaultProps: ->
     cars: []
+  addCar: (car) ->
+    cars = @state.cars.slice()
+    cars.push car
+    @setState cars: cars
   render: ->
     React.DOM.div
       className: 'cars'
       React.DOM.h1
         className: 'title'
         'Cars'
+      React.createElement CarForm, handleNewCar: @addCar
       React.DOM.table
         className: 'table table-bordered'
         React.DOM.thead null,
