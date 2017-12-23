@@ -11,6 +11,11 @@
     cars = @state.cars.slice()
     index = cars.indexOf car
     cars.splice index, 1
+  updateCar: (car, data) ->
+    index = @state.cars.indexOf car
+    cars = React.addons.update(@state.cars, { $splice: [[index, 1, data]] })
+    @replaceState cars: cars
+
   render: ->
     React.DOM.div
       className: 'cars'
@@ -29,4 +34,4 @@
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,
          for car in @state.cars
-          React.createElement Car, key: car.id, car: car, handleDeleteCar: @deleteCar
+          React.createElement Car, key: car.id, car: car, handleDeleteCar: @deleteCar, handleEditCar: @updateCar
