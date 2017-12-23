@@ -2,6 +2,7 @@ class CarsController < ApplicationController
 
 	def index
 		@cars = Car.all
+        #render component: 'Cars' , props: { cars: @cars }
 	end
 
 	def create
