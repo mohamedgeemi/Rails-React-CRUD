@@ -4,7 +4,7 @@
 
 - Ruby 2.3.1
 - Rails 5.0.6
-- ReactJS + react-rails
+- ReactJS 
 - Sqlite3
  
 ## How to use:
@@ -15,7 +15,7 @@
 - Install gems and migrate the database
 ```
 bundle install
-rails db:migrate
+rake db:migrate
 ```
 - Run the app
 ```

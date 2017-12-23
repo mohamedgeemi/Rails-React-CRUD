@@ -21,7 +21,7 @@
       className: 'cars'
       React.DOM.h1
         className: 'title'
-        'Cars'
+        'Cars Application'
       React.createElement CarForm, handleNewCar: @addCar
       React.DOM.table
         className: 'table table-bordered'
