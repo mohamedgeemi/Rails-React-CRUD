@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
 
 	def index
-		@cars = Car.all
+		@cars = Car.search(params[:search])
 	end
 
 	def create
