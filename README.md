@@ -1,4 +1,4 @@
-# Simple Rails-React CRUD Web Application 
+# Simple Rails-React CRUD Web Application
 
 ## Stack:
 
@@ -20,4 +20,8 @@ rake db:migrate
 - Run the app
 ```
 rails s
+```
+- Open the app in your browser
+```
+http://localhost:3000/cars
 ```
